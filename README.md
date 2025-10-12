@@ -1,10 +1,11 @@
-🗑️ Trash To Value: Smart Waste Solutions for a Circular Economy
-💡 Project Overview: Transforming Pollution into Profit
+# 🗑️ Trash To Value: Smart Waste Solutions for a Circular Economy
+
+# 💡 Project Overview: Transforming Pollution into Profit
 Trash To Value is a complete, integrated smart waste management solution designed to tackle Kenya's severe waste crisis. Currently, less than half of the generated waste is properly collected, leading to widespread open dumping, environmental pollution, and public health hazards.
 
 Our solution moves beyond traditional collection methods by creating a technologically advanced, financially sustainable circular economy ecosystem centered on data-driven efficiency and waste valorization.
 
-🎯 The Core Problem and Our Integrated Solution
+#🎯 The Core Problem and Our Integrated Solution
 The Challenge
 Inefficient collection systems and a lack of real-time data result in unnecessary operational costs and massive environmental degradation. Waste is intercepted poorly, directly contaminating land (SDG 15) and water bodies (SDG 6/14).
 
