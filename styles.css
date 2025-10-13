@@ -358,3 +358,27 @@ a[href="tel:+254710217048"]:hover {
     position: relative;
     z-index: 10;
 }
+
+/* --- Green Growing effect for major headings --- */
+@keyframes headingGreenGrow {
+    0% {
+        transform: scale(0.92);
+        opacity: 0.2;
+        box-shadow: 0 0 0 0 rgba(67, 233, 123, 0.5);
+    }
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+        box-shadow: 0 0 0 24px rgba(67, 233, 123, 0.18);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(67, 233, 123, 0);
+    }
+}
+
+/* Apply to all major headings */
+h1, h2, h3 {
+    animation: headingGreenGrow 0.8s cubic-bezier(0.4, 0.8, 0.2, 1) both;
+}
