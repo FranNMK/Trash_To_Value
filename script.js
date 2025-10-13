@@ -177,3 +177,109 @@ async function submitContactForm(event) {
         alert("We encountered an issue. Please try again later.");
     }
 }
+
+// --- Carousel Functionality ---
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('#carousel .carousel-slide');
+    const prevBtn = document.querySelector('#carousel .prev');
+    const nextBtn = document.querySelector('#carousel .next');
+    const indicatorsContainer = document.querySelector('#carousel .carousel-indicators');
+    let current = 0;
+    let interval;
+
+    // Create indicators
+    slides.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.addEventListener('click', () => showSlide(idx));
+        indicatorsContainer.appendChild(dot);
+    });
+
+    function showSlide(idx) {
+        slides[current].classList.remove('active');
+        indicatorsContainer.children[current].classList.remove('active');
+        current = idx;
+        slides[current].classList.add('active');
+        indicatorsContainer.children[current].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide((current + 1) % slides.length);
+    }
+    function prevSlide() {
+        showSlide((current - 1 + slides.length) % slides.length);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Auto-play
+    function startAuto() {
+        interval = setInterval(nextSlide, 4000);
+    }
+    function stopAuto() {
+        clearInterval(interval);
+    }
+    indicatorsContainer.addEventListener('mouseenter', stopAuto);
+    indicatorsContainer.addEventListener('mouseleave', startAuto);
+    prevBtn.addEventListener('mouseenter', stopAuto);
+    nextBtn.addEventListener('mouseenter', stopAuto);
+    prevBtn.addEventListener('mouseleave', startAuto);
+    nextBtn.addEventListener('mouseleave', startAuto);
+
+    // Init
+    showSlide(0);
+    startAuto();
+});
+
+// --- Carousel Functionality for background ---
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('#carousel-bg .carousel-slide');
+    const prevBtn = document.querySelector('#carousel-bg .prev');
+    const nextBtn = document.querySelector('#carousel-bg .next');
+    const indicatorsContainer = document.querySelector('#carousel-bg .carousel-indicators');
+    let current = 0;
+    let interval;
+
+    // Create indicators
+    slides.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.addEventListener('click', () => showSlide(idx));
+        indicatorsContainer.appendChild(dot);
+    });
+
+    function showSlide(idx) {
+        slides[current].classList.remove('active');
+        indicatorsContainer.children[current].classList.remove('active');
+        current = idx;
+        slides[current].classList.add('active');
+        indicatorsContainer.children[current].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide((current + 1) % slides.length);
+    }
+    function prevSlide() {
+        showSlide((current - 1 + slides.length) % slides.length);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Auto-play
+    function startAuto() {
+        interval = setInterval(nextSlide, 4000);
+    }
+    function stopAuto() {
+        clearInterval(interval);
+    }
+    indicatorsContainer.addEventListener('mouseenter', stopAuto);
+    indicatorsContainer.addEventListener('mouseleave', startAuto);
+    prevBtn.addEventListener('mouseenter', stopAuto);
+    nextBtn.addEventListener('mouseenter', stopAuto);
+    prevBtn.addEventListener('mouseleave', startAuto);
+    nextBtn.addEventListener('mouseleave', startAuto);
+
+    // Init
+    showSlide(0);
+    startAuto();
+});
